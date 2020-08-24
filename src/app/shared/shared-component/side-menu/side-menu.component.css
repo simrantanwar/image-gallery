@@ -1,0 +1,74 @@
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #314c4d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 14px;
+    background: linear-gradient(145deg, #4CAF50, #5fb7ff);
+}
+
+.sidenav a {
+    padding: 8px 0px 8px 13px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: black;
+}
+
+.icon a:hover {
+    color: white;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 2px;
+    right: 11px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    margin: 6px 0px;
+}
+
+.header-logo {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.show-icon {
+    display: contents!important;
+}
+
+.icon {
+    background-color: black;
+}
+
+.algo-tag {
+    color: white;
+}

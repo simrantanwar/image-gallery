@@ -1,0 +1,12 @@
+<div class="row" *ngIf="!showLoader">
+    <div *ngFor="let record of images" class="div-container">
+        <div [ngStyle]="{'background-image': 'url(' + record + ')'}" class="image-thumbnail">
+        </div>
+    </div>
+    <div class="div-container  add-button" [routerLink]="['/layout/upload-images']">
+        <div class="image-thumbnail text-center ">
+            <i class="fa fa-upload fa-3x mt-5" aria-hidden="true"></i>
+            <h6 class="mt-3">Add Image</h6>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div #sideNav class="sidenav">
+    <div class="icon" [ngStyle]="{'text-align': !isOpen ? 'center':'left'}">
+        <img *ngIf="isOpen" src="../../../../assets/media/algoworks-logo.png" alt="company-logo" class="logo mr-1">
+        <span *ngIf="isOpen" class="algo-tag">Algoworks</span>
+        <a class="closebtn" (click)="closeSideMenu()" *ngIf="isOpen">&times;</a>
+        <a class="closebtn show-icon" (click)="openSideMenu()" *ngIf="!isOpen">&#9776;</a>
+    </div>
+    <a [routerLink]="['/layout/upload-images']" (click)="closeSideMenu()"><i class="fa fa-upload mr-3" aria-hidden="true"></i> <h6 *ngIf="isOpen">Upload Image</h6></a>
+    <a [routerLink]="['/layout/image-gallery']" (click)="closeSideMenu()"><i class="fa fa-picture-o mr-3" aria-hidden="true"></i>  <h6 *ngIf="isOpen">Image Gallery</h6></a>
+</div>

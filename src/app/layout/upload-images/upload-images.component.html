@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between">
+    <input class="d-none" #upload type="file" multiple (change)="selectImage($event.target.files)">
+    <button class="btn btn-primary mr-1 mb-2" (click)="upload.click()">Select Images</button>
+    <button [disabled]="images.length < 1" class="btn btn-success mr-1 mb-2" (click)="uploadImages()">Upload Images</button>
+</div>
+<br>
+<div class="row">
+    <div *ngFor="let record of images" class="div-container">
+        <div [ngStyle]="{'background-image': 'url(' + record + ')'}" class="image-thumbnail">
+        </div>
+    </div>
+</div>
