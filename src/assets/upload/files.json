@@ -1,0 +1,13 @@
+{
+    "result": [
+        "assets/upload/image1.jpg",
+        "assets/upload/image2.jpg",
+        "assets/upload/image3.jpg",
+        "assets/upload/image4.jpg",
+        "assets/upload/image5.jpg",
+        "assets/upload/image6.jpg"
+    ],
+    "success": true,
+    "statusCode": 200,
+    "message": "Images fetched successfully."
+}

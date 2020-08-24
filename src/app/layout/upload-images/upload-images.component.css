@@ -1,0 +1,18 @@
+.image-thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 3%;
+    margin-top: 3%;
+    height: 94%;
+    width: 94%;
+}
+
+.div-container {
+    background-color: lightgray;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 3px;
+}

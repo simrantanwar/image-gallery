@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: cadetblue;
+    background: linear-gradient(145deg, #0f3672, #5fb7ff);
+}
+
+.footer-label {
+    position: relative;
+    top: 15px;
+}

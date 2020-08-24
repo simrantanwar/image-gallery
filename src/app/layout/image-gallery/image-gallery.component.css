@@ -1,0 +1,28 @@
+.image-thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 3%;
+    margin-top: 3%;
+    height: 94%;
+    width: 94%;
+}
+
+.div-container {
+    background-color: lightgray;
+    height: 220px;
+    width: 230px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.add-button {
+    cursor: pointer;
+}
+
+.add-button:hover {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
