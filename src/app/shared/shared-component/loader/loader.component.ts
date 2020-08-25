@@ -7,17 +7,16 @@ import { LoaderService } from '../../shared-services/loader.service';
   styleUrls: ['./loader.component.css']
 })
 export class LoaderComponent implements OnInit {
-  showLoader:boolean=false;
-  constructor(private _loaderService : LoaderService) { }
+  showLoader: boolean = false;
+  constructor(private _loaderService: LoaderService) { }
 
   ngOnInit(): void {
     this.loader();
   }
 
-  loader(){
-    this._loaderService.loaderState.subscribe(resp=>{
-     
-    this.showLoader= resp;
+  loader() {
+    this._loaderService.loaderState.subscribe(resp => {
+      this.showLoader = resp;
     }
     )
   }

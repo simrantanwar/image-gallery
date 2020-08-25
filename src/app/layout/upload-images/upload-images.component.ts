@@ -22,6 +22,8 @@ export class UploadImagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Selecting Images to be uploaded & preparing preview thumbnails
+
   selectImage(files) {
 
     this.images = [];
@@ -42,6 +44,8 @@ export class UploadImagesComponent implements OnInit {
     }
     this.requestBody = formData;
   }
+
+  // Uploading images to the server 
 
   uploadImages() {
     this._loaderService.loaderValue(true);
@@ -67,11 +71,16 @@ export class UploadImagesComponent implements OnInit {
         this.message = message;
 
       }), finalize(() => {
+
+        // SetTimout is only used to mimic async behvaviour during API calls (to show loaders and toaster messages)
+        // Aftre integrating Api we can get rid of this.
+
         setTimeout(() => {
           this._toastService.toaster(this.message);
           this._loaderService.loaderValue(false);
           this.images = [];
         }, 3000);
+
       })
     ).subscribe();
 
