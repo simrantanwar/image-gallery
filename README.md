@@ -1,4 +1,4 @@
-# AngularAlgoworks (Image Gallery)
+# Algoworks Assessment (Image Gallery)
 
 Algoworks Assessment
 
@@ -14,4 +14,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 4. Gallery Viewer for viewing uploaded images.
 
 
-##End
+## End
