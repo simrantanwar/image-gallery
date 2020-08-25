@@ -11,9 +11,13 @@ export class ImageService {
 
   constructor(private http: HttpClient) { }
 
+  // API will be used for gettting all the uploaded images
+  
   getImages(): Observable<any> {
     return this.http.get(GET_IMAGES_URL);
   }
+
+  // Returning hard coded response as we dont have API right now
 
   saveImages(requestBody) {
     return from(Promise.resolve(

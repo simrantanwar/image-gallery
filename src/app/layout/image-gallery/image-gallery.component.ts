@@ -40,10 +40,15 @@ export class ImageGalleryComponent implements OnInit {
           this._toastService.toaster(message);
         }
       }), finalize(() => {
+
+        // SetTimout is only used to mimic async behvaviour during API calls (to show loaders and toaster messages)
+        // Aftre integrating Api we can get rid of this.
+
         setTimeout(() => {
           this._loaderService.loaderValue(false);
           this.showLoader = false;
         }, 3000);
+        
       })
     ).subscribe();
   }
