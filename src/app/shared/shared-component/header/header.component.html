@@ -1,5 +1,28 @@
+
+
 <div class="header">
     <div class="header-right">
-        <h6 class="user-tab">Hi, User<i class="fa fa-user ml-1" aria-hidden="true"></i></h6>
+        <h6 class="user-tab" data-toggle="modal" data-target=".bs-example-modal-sm" (click)="showModal=true">Hi, User<i
+                class="fa fa-user ml-1" aria-hidden="true"></i></h6>
     </div>
 </div>
+
+<div class="logout-body" *ngIf="showModal">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h5>
+                    Log Out
+                </h5>
+                <h6 (click)="closeLogout()"><i class="fa fa-times" aria-hidden="true"></i></h6>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-primary" (click)="logout()">Logout</button>
+                <button class="btn btn-light" (click)="closeLogout()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay-logout" *ngIf="showModal" (click)="closeLogout()"></div>

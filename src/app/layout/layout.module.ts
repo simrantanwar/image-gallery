@@ -5,7 +5,6 @@ import { BaseComponent } from './base/base.component';
 import { SharedModule } from '../shared/shared.module';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
-import { MessageService } from 'primeng/api';
 
 const routes: Routes = [
   {
@@ -31,6 +30,6 @@ const routes: Routes = [
     SharedModule,
 
   ],
-  providers: [MessageService]
+  providers: []
 })
 export class LayoutModule { }

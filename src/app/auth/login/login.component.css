@@ -1,0 +1,28 @@
+.card-portlet {
+    text-align: -webkit-center;
+}
+
+.card {
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    top: 11rem;
+}
+
+.input-line {
+    width: 70%;
+    margin-top: 12px;
+}
+
+.btn {
+    width: 70%;
+}
+
+.spinner-border {
+    height: 20px;
+    width: 20px;
+}
+
+.button {
+    height: 90px;
+}

@@ -21,3 +21,23 @@
 .header-right:hover {
     background-color: #00000017;
 }
+
+
+.logout-body{
+    position: absolute;
+    right: 34px;
+    top: 60px;
+    z-index: 9999;
+}
+.overlay-logout{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9998;
+}
+.card{
+    background-color: whitesmoke;
+}
