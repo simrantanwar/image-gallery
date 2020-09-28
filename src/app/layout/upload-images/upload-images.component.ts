@@ -49,6 +49,7 @@ export class UploadImagesComponent implements OnInit {
 
   uploadImages() {
     this._loaderService.loaderValue(true);
+    this._imageService.uploadImage(this.images);
     this._imageService.saveImages(this.requestBody).pipe(
       catchError((err) => of(err)),
       tap(resp => {

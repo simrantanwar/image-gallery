@@ -29,6 +29,9 @@ export class ImageGalleryComponent implements OnInit {
       tap(resp => {
         if (resp.success) {
           this.images = resp.result;
+          this._imageService.imagesUrls.forEach(element => {
+            this.images.push(element)
+          })
         }
         else {
           console.log(resp.message);
@@ -48,7 +51,7 @@ export class ImageGalleryComponent implements OnInit {
           this._loaderService.loaderValue(false);
           this.showLoader = false;
         }, 3000);
-        
+
       })
     ).subscribe();
   }

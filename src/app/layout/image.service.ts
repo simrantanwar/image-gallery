@@ -9,10 +9,11 @@ const GET_IMAGES_URL = 'assets/upload/files.json';
 })
 export class ImageService {
 
+  imagesUrls: Array<any> = [];
   constructor(private http: HttpClient) { }
 
   // API will be used for gettting all the uploaded images
-  
+
   getImages(): Observable<any> {
     return this.http.get(GET_IMAGES_URL);
   }
@@ -26,8 +27,14 @@ export class ImageService {
         "success": true,
         "statusCode": 200,
         "message": "Images uploaded successfully."
-    }
+      }
     ));
+  }
+
+  uploadImage(urls) {
+    urls.forEach(element => {
+      this.imagesUrls.push(element);
+    });
   }
 
 }

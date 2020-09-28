@@ -1,35 +1,37 @@
-<div class="card-portlet">
-    <div class="card" style="width: 28rem;">
-        <div class="card-body">
-            <form [formGroup]="signInForm" (ngSubmit)="signIn()">
-                <div>
-                    <mat-form-field class="input-line">
-                        <mat-label>Email Address</mat-label>
-                        <input matInput type="email" formControlName="email">
-                        <mat-error *ngIf="validateControl('email','required')">Please enter a value</mat-error>
-                        <mat-error *ngIf="validateControl('email','maxlength')">Maxlength is 50 character</mat-error>
-                        <mat-error *ngIf="validateControl('email','pattern')">Please enter a valid email</mat-error>
-                    </mat-form-field>
+<div class="overlay-login">
+    <div class="card-portlet">
+        <div class="card" style="width: 28rem;">
+            <div class="card-body">
+                <form [formGroup]="signInForm" (ngSubmit)="signIn()">
+                    <div>
+                        <mat-form-field class="input-line">
+                            <mat-label>Email Address</mat-label>
+                            <input matInput type="email" formControlName="email">
+                            <mat-error *ngIf="validateControl('email','required')">Please enter a value</mat-error>
+                            <mat-error *ngIf="validateControl('email','maxlength')">Maxlength is 50 character</mat-error>
+                            <mat-error *ngIf="validateControl('email','pattern')">Please enter a valid email</mat-error>
+                        </mat-form-field>
 
-                </div>
-                <div>
-                    <mat-form-field class="input-line">
-                        <mat-label>Password</mat-label>
-                        <div class="d-flex">
-                            <input matInput [type]="isShow ? 'text' : 'password'" formControlName="password">
-                            <i [class]="isShow ? 'fa fa-eye-slash fa-lg' : 'fa fa-eye fa-lg'" aria-hidden="true" (click)="showPassword()"></i>
-                        </div>
-
-                        <mat-error *ngIf="validateControl('password','required')">Please enter a value</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="button">
-                    <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="signInForm.invalid || showLoader">Sign In</button>
-
-                    <div class="spinner-border text-primary mt-4" role="status" *ngIf="showLoader">
                     </div>
-                </div>
-            </form>
+                    <div>
+                        <mat-form-field class="input-line">
+                            <mat-label>Password</mat-label>
+                            <div class="d-flex">
+                                <input matInput [type]="isShow ? 'text' : 'password'" formControlName="password">
+                                <i [class]="isShow ? 'fa fa-eye-slash fa-lg' : 'fa fa-eye fa-lg'" aria-hidden="true" (click)="showPassword()"></i>
+                            </div>
+
+                            <mat-error *ngIf="validateControl('password','required')">Please enter a value</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="signInForm.invalid || showLoader">Sign In</button>
+
+                        <div class="spinner-border text-primary mt-4" role="status" *ngIf="showLoader">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

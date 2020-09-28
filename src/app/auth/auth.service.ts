@@ -13,7 +13,7 @@ export class AuthService {
           "result": [],
           "success": true,
           "status": 200,
-          "message": "Fetch succesfully"
+          "message": "Logged in successfully"
       }
       ))
     }
